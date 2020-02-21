@@ -1,9 +1,22 @@
+@mixin main($padding: 100px 50px){
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-linear-gradient(125deg, white 0%, #E1E6EC 100%);
+  background: linear-gradient(125deg, white 0%,#E1E6EC 100%);
+  background-blend-mode: normal,color-burn;
+  padding: $padding;
+  position: relative;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
 body{
   overflow: scroll;
 }
 
 .top_image{
   size: 100px;
+	vertical-align: bottom;
 }
 
 .resizeimage{
@@ -14,20 +27,19 @@ body{
 h1{
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 
 
-.profile, .works, .skills, .contact{
-  width: 100vw;
-  height: 100vh;
-  background: -webkit-linear-gradient(125deg, white 0%, #E1E6EC 100%);
-  background: linear-gradient(125deg, white 0%,#E1E6EC 100%);
-  background-blend-mode: normal,color-burn;
-  padding: 100px 50px;
-  position: relative;
+.profile, .school_works2, .skills, .contact{
+  @include main;
 }
+
+.profile::-webkit-scrollbar, .my_works::-webkit-scrollbar, .school_works::-webkit-scrollbar, .skills::-webkit-scrollbar {
+  display:none;
+}
+
 
 .main{
   margin: 0 auto;
@@ -39,19 +51,48 @@ h1{
     ul{
       margin: 50px auto;
       width: 550px;
-      // position: absolute;
-      // top: 35%;
-      // left: 30%;
       li{
-
       text-align: left;
       }
-
     }
   }
 }
 
-.works, .skills{
+.my_works{
+  @include main(50px 50px);
+  .main{
+    ul{
+      margin: 20px auto;
+      width: 90%;
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      li{
+      text-align: left;
+      margin: 30px;
+      }
+    }
+  }
+}
+
+.school_works{
+  @include main(50px 50px);
+  .main{
+    ul{
+      margin: 20px auto;
+      width: 90%;
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      li{
+      text-align: left;
+      margin: 30px;
+      }
+    }
+  }
+}
+
+.skills{
   .main{
     ul{
       width: 300px;
@@ -63,6 +104,11 @@ h1{
   }
 }
 
+
+
+
+
+
 .icon{
   width: 60px;
   color: gray;
@@ -70,6 +116,11 @@ h1{
 
 .deco_none{
   text-decoration: none;
+  color: black;
+}
+
+.width300{
+  width: 300px;
 }
 
 

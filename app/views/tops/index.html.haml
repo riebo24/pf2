@@ -13,17 +13,69 @@
       %li ・ユーザーの生活を少しでも便利にできるエンジニアを目指して転職活動中
 
 
-.works
+.my_works
   .main
     %h1 My Works
     %ul
-      %li ・家計簿アプリ
-      %li ・旅行に特化したブログアプリ
-      %li ・収益計算アプリ
-      %li ・チャットアプリ（スクール課題）
-      %li ・フリマアプリ（スクール課題）
+      %li 
+        %p<>
+          = link_to '家計簿アプリ', 'http://18.176.160.185/', class:'deco_none'
+          %p 
+            = link_to 'http://18.176.160.185/' do
+              = image_tag '/家計簿.png', class: 'width300' 
+
+      %li
+        %p<>
+          = link_to '旅行に特化したブログアプリ', 'http://18.176.160.185/', class:'deco_none'
+          %p 
+            = link_to 'http://18.176.160.185/' do
+              = image_tag '/旅行アプリ.jpg', class: 'width300' 
+
+      %li 
+        %p<>
+          = link_to '収益計算アプリ', 'http://18.176.160.185/', class:'deco_none'
+          %p 
+            = link_to 'http://18.176.160.185/' do
+              = image_tag '/チャットアプリ.png', class: 'width300' 
+
+
+
       %li ・Qiita記事
       %li ・tweeter
+
+.school_works
+  .main
+    %h1 school works
+    %ul
+      %li 
+        %p<>
+          = link_to 'チャットアプリ（スクール課題）', 'http://18.176.160.185/', class:'deco_none'
+          %p 
+            = link_to 'http://18.176.160.185/' do
+              = image_tag '/チャットアプリ.png', class: 'width300' 
+          .witdh300
+            %p 【テスト用アカウント】　
+            %p email   : test1@com
+            %p name    : テスト太郎
+            %p password: 11111111 
+              
+      %li
+        %p<>
+          = link_to 'フリマアプリ（スクール課題）', 'http://18.178.190.24/', class: 'deco_none'
+          %p
+            = link_to 'http://18.178.190.24/' do
+              = image_tag '/フリマアプリ.jpg', class: 'width300'
+          %p 【basic認証】
+          %p ユーザー名  : admin
+          %p パスワード　: 2222
+          %p 【テスト用アカウント】
+          %p 出品者　
+          %p email     : test1@com
+          %p password  : 11111111 
+
+          %p 購入者
+          %p email     : test2@com
+          %p password  : 11111111 
 
 
 .skills
@@ -38,7 +90,7 @@
   .main
     %h1 contact
     %p 
-      = link_to "https://twitter.com/riebo24", class: "deco_none" do 
-        =image_tag "/twitter.png", class: "icon"
-      = link_to "#" do 
-        =image_tag "/mail3.png", class: "icon"
+      = link_to 'https://twitter.com/riebo24', class: 'deco_none' do 
+        =image_tag '/twitter.png', class: 'icon'
+      = link_to '#' do 
+        =image_tag '/mail3.png', class: 'icon'
