@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+@import "./reset";
+@import "./top";
+
+*{
+  box-sizing: border-box;
+  // font-family: 'Amatic SC', cursive;                //英数字用フォント Amatic SC
+  font-family: 'M+ Type-1 (general-j) Regular';  //日本語用フォント M+ FONTS
+  // font-family: 'Dancing Script', cursive;        //数字用フォント
+  text-align: center;
+
+}
