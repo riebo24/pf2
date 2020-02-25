@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: pf2_production
-  username: pf2
+  username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
