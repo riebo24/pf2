@@ -70,10 +70,14 @@ h1{
       li{
       text-align: left;
       margin: 30px;
+        .rotate:hover{
+          transition: all 1.5s linear 0s;
+          transform: rotateY(360deg);
+        }
+      }
       }
     }
   }
-}
 
 .school_works{
   @include main(50px 50px);
@@ -104,9 +108,12 @@ h1{
   }
 }
 
-
-
-
+@media screen and (max-width:480px){
+    /*画面幅が480pxまでの時*/
+}
+@media screen and (min-width:481px){
+  }
+  
 
 
 .icon{
