@@ -51,4 +51,5 @@ production:
   <<: *default
   database: pf2_production
   username: pf2
-  password: <%= ENV['PF2_DATABASE_PASSWORD'] %>
+  password: <%= Rails.application.credentials[:DATABASE_PASSWORD] %>
+  socket: /var/lib/mysql/mysql.sock
