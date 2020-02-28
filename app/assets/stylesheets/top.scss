@@ -149,7 +149,7 @@ body{
       margin: 50px auto;
       width: 550px;
       li{
-      width: 100px;
+      width: 70vw;
       word-wrap: break-word;  // width以上にはみだした場合、文字の区切れを探して折り返す
       text-align: left;
       box-sizing: border-box;
@@ -186,6 +186,7 @@ body{
 }
 
 .school_works{
+  height: 100vh;
   @include main(50px 50px);
   .main{
     ul{
@@ -235,40 +236,40 @@ body{
 
 
 
-//画面幅が480pxまで
-// @media screen and (max-width:480px){
-//   body{
-//     width: 100vw;
-//     overflow-x: hidden;
-//   }
-//   .top{
-//     .resize-image{
-//       width: 100wh;
-//       height: 50vh;
-//     }
-//     .cover{
-//       width: 100vw;
-//       height: 50vh;
-//     }
-//   }
-//   h1{
-//     font-size: 30px;
-//   }
+// 画面幅が480pxまで
+@media screen and (max-width:480px){
+  body{
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .top{
+    .resize-image{
+      width: 100wh;
+      height: 50vh;
+    }
+    .cover{
+      width: 100vw;
+      height: 50vh;
+    }
+  }
+  h1{
+    font-size: 30px;
+  }
 
-//   .my_works{
-//     .main{
-//       margin: 0 auto;
-//     }
-//     .ul{
-//       display: block;
-//     }
-//   }
+  .my_works{
+    .main{
+      margin: 0 auto;
+    }
+    .ul{
+      display: block;
+    }
+  }
 
-//   .school_works{
-//     .main{
-//       ul{
-//         display: block;
-//       }
-//     }
-//   }
-// }
+  .school_works{
+    .main{
+      ul{
+        display: block;
+      }
+    }
+  }
+}
