@@ -2,12 +2,19 @@
   =image_tag "/top.jpeg", class:"top_image resizeimage"
   .cover
   %ul.welcome
-    %li
-      Welcome my PF
-    %li
-      aaaa
+    %li.large
+      Rie Yoshida
+    %li.small
+      = link_to "Profile", "#profile", class: "black"
+    %li.small
+      = link_to "works", "#works", class: "black"
+    %li.small
+      = link_to "skills", "#skills", class: "black"
+    %li.small
+      = link_to "contact", "#contact", class: "black"
+
   
-.profile
+.profile#profile
   .main
     %h1 Profile
     %p 吉田　理絵｜ Yoshida Rie
@@ -20,7 +27,7 @@
       %li ・ユーザーの生活を少しでも便利にできるエンジニアを目指して転職活動中
 
 
-.my_works
+.my_works#works
   .main
     %h1 My Works
     %ul
@@ -85,7 +92,7 @@
           %p password  : 11111111 
 
 
-.skills
+.skills#skills
   .main
     %h1 Skills
     %ul
@@ -93,7 +100,7 @@
       %li HTML/CSS/JavaScript/JQuery/Ruby/Rails
       %li Git,Github/MySQL/AWS
 
-.contact
+.contact#contact
   .main
     %h1 contact
     %p 
