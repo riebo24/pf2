@@ -1,20 +1,38 @@
+//mixin 
 @mixin main($padding: 100px 50px){
   width: 100vw;
-  height: 100vh;
   background: -webkit-linear-gradient(125deg, white 0%, #E1E6EC 100%);
   background: linear-gradient(125deg, white 0%,#E1E6EC 100%);
   background-blend-mode: normal,color-burn;
   padding: $padding;
   position: relative;
-  overflow: scroll;
+  // overflow: scroll;
   scrollbar-width: none;
 }
+//mixin 終了
+
+
+//汎用的に使うもの
+h1{
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.black{
+  color: black;
+}
+
+//汎用的に使うもの 終了
+
+
 
 body{
-  overflow: scroll;
+  // overflow: scroll;
 }
 
 .top{
+  width: 100;
   position: relative;
   .cover{
     position: absolute;
@@ -26,72 +44,90 @@ body{
     width: 100%;
     z-index: 9;
   }
-  .welcome{
-    font-family: Amatic SC;
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    z-index: 100;
-    background-color: yellow;
-  }
-
-  .welcome li{
-    font-family: Amatic SC;
-    color: #000;
-    background-color: #fff;
-    width: 30vw;
-    padding: 8px 15px;
-    margin-bottom: 10px;
-    transition: all 3s ease-in;
-    opacity: 0;
-    list-style: none;
-  }
-  .welcome li:nth-child(1){
-     transition-delay:0.1s;
-  }
-  .welcome li:nth-child(2){
-     transition-delay:0.6s;
-  }
-  .welcome li:nth-child(3){
-     transition-delay:1.1s;
-  }
-  .welcome li:nth-child(4){
-     transition-delay:1.6s;
-  }
-  .welcome li:nth-child(5){
-     transition-delay:2.1s;
-  }
-  .welcome.henka li{
-    transform: translateX(30px);
-    opacity: 1;
-  }
-
-
-
-
-
-
-
 
 .top_image{
   size: 100px;
 	vertical-align: bottom;
 }
 
-.resizeimage{
+.resize-image{
   width: 100%;
   height: 100vh;
 }
 }
 
-h1{
+
+
+
+// welcomeクラス
+.welcome{
   font-family: 'Amatic SC', cursive;
-  font-size: 30px;
-  margin-bottom: 50px;
+  text-align: left;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  -webkit-transform : translateY(-70%);
+  transform : translateY(-70%);  
+  z-index: 10;
+
+  .large{
+    font-size: 50px;
+    width: 350px;
+  }
+
+  .small{
+    font-size: 20px;
+    width: 150px;
+    margin-left: 200px;
+  }
+
+  li{
+  text-align: left;
+  font-family: 'Amatic SC', cursive;
+  color: #000;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  list-style: none;
+
 }
 
+  li:nth-child(1){
+    transition-delay:0s;
+  }
+
+  li:nth-child(2){
+    transition-delay:0.5s;
+  }
+
+  li:nth-child(3){
+    transition-delay:1.0s;
+  }
+
+  li:nth-child(4){
+    transition-delay:1.5s;
+  }
+  li:nth-child(5){
+    transition-delay:2.0s;
+  }
+  li:nth-child(6){
+    transition-delay:2.5s;
+  }
+}
+  //アニメーション付与
+  .changed li{
+    transform: translateX(30px);
+    opacity: 0.5;
+  }
+
+// welcomeクラス終了
 
 
+
+//その他のCSS
 .profile, .school_works2, .skills, .contact{
   @include main;
 }
@@ -107,12 +143,17 @@ h1{
 
 
 .profile{
+  height: 100vh;
   .main{
     ul{
       margin: 50px auto;
       width: 550px;
       li{
+      width: 100px;
+      word-wrap: break-word;  // width以上にはみだした場合、文字の区切れを探して折り返す
       text-align: left;
+      box-sizing: border-box;
+      margin: 0px 30px;
       }
     }
   }
@@ -122,28 +163,33 @@ h1{
   @include main(50px 50px);
   .main{
     ul{
-      margin: 20px auto;
-      width: 90%;
+      margin: 0 auto;
+      width: 90vw;
       display: flex;
       flex-wrap:wrap;
       justify-content: center;
+
       li{
+      margin: 0 auto;
       text-align: left;
-      margin: 30px;
+      margin-bottom: 40px;
+      overflow-x: hidden;
+      width: 90vw;
+      text-align: center;
         .rotate:hover{
           transition: all 1.5s linear 0s;
           transform: rotateY(360deg);
         }
       }
-      }
     }
   }
+}
 
 .school_works{
   @include main(50px 50px);
   .main{
     ul{
-      margin: 20px auto;
+      margin: 0px auto;
       width: 90%;
       display: flex;
       flex-wrap:wrap;
@@ -157,6 +203,7 @@ h1{
 }
 
 .skills{
+  height: 100vh;
   .main{
     ul{
       width: 300px;
@@ -168,13 +215,9 @@ h1{
   }
 }
 
-@media screen and (max-width:480px){
-    /*画面幅が480pxまでの時*/
+.contact{
+  height: 100vh;
 }
-@media screen and (min-width:481px){
-  }
-  
-
 
 .icon{
   width: 60px;
@@ -191,3 +234,41 @@ h1{
 }
 
 
+
+//画面幅が480pxまで
+// @media screen and (max-width:480px){
+//   body{
+//     width: 100vw;
+//     overflow-x: hidden;
+//   }
+//   .top{
+//     .resize-image{
+//       width: 100wh;
+//       height: 50vh;
+//     }
+//     .cover{
+//       width: 100vw;
+//       height: 50vh;
+//     }
+//   }
+//   h1{
+//     font-size: 30px;
+//   }
+
+//   .my_works{
+//     .main{
+//       margin: 0 auto;
+//     }
+//     .ul{
+//       display: block;
+//     }
+//   }
+
+//   .school_works{
+//     .main{
+//       ul{
+//         display: block;
+//       }
+//     }
+//   }
+// }
