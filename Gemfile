@@ -73,3 +73,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'fog-aws'   # 画像をアップデートする際、外部ストレージを選択しアップロードするのを補助してくれる
+gem 'jquery-rails'
