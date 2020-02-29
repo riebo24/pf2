@@ -126,12 +126,13 @@ body{
 
 
 
-//その他のCSS
-.profile, .school_works2, .skills, .contact{
-  @include main;
-}
 
-.profile::-webkit-scrollbar, .my_works::-webkit-scrollbar, .school_works::-webkit-scrollbar, .skills::-webkit-scrollbar {
+// .profile, .works, .skills, .contact{
+//   @include main;
+// }
+
+//その他のCSS
+.profile::-webkit-scrollbar, .works::-webkit-scrollbar, .skills::-webkit-scrollbar {
   display:none;
 }
 
