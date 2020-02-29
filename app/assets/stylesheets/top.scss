@@ -1,12 +1,11 @@
 //mixin 
-@mixin main($padding: 100px 50px){
+@mixin main($padding: 100px 20px){
   width: 100vw;
   background: -webkit-linear-gradient(125deg, white 0%, #E1E6EC 100%);
   background: linear-gradient(125deg, white 0%,#E1E6EC 100%);
   background-blend-mode: normal,color-burn;
   padding: $padding;
   position: relative;
-  // overflow: scroll;
   scrollbar-width: none;
 }
 //mixin 終了
@@ -159,45 +158,48 @@ body{
   }
 }
 
-.my_works{
-  @include main(50px 50px);
-  .main{
-    ul{
-      margin: 0 auto;
-      width: 90vw;
-      display: flex;
-      flex-wrap:wrap;
-      justify-content: center;
+// .my_works{
+//   @include main(50px 50px);
+//   .main{
+//     ul{
+//       margin: 0 auto;
+//       width: 90vw;
+//       display: flex;
+//       flex-wrap:wrap;
+//       justify-content: center;
 
-      li{
-      margin: 0 auto;
-      text-align: left;
-      margin-bottom: 40px;
-      overflow-x: hidden;
-      width: 90vw;
-      text-align: center;
-        .rotate:hover{
-          transition: all 1.5s linear 0s;
-          transform: rotateY(360deg);
-        }
-      }
-    }
-  }
-}
+//       li{
+//       margin: 0 auto;
+//       text-align: left;
+//       margin-bottom: 40px;
+//       overflow-x: hidden;
+//       width: 90vw;
+//       text-align: center;
+//         .rotate:hover{
+//           transition: all 1.5s linear 0s;
+//           transform: rotateY(360deg);
+//         }
+//       }
+//     }
+//   }
+// }
 
-.school_works{
-  height: 100vh;
-  @include main(50px 50px);
+.works{
+  @include main(50px 0px);
+  
   .main{
+    margin: 0 auto;
     ul{
       margin: 0px auto;
-      width: 90%;
+      width: 90vw;
       display: flex;
       flex-wrap:wrap;
       justify-content: center;
       li{
+        margin: 0 auto;
+      width: 80vw;
       text-align: left;
-      margin: 30px;
+      margin-top: 30px;
       }
     }
   }
@@ -231,13 +233,15 @@ body{
 }
 
 .width300{
-  width: 300px;
+  width: 80vw;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 
 
-// 画面幅が480pxまで
-@media screen and (max-width:480px){
+// 画面幅が600pxまで
+@media screen and (max-width:600px){
   body{
     width: 100vw;
     overflow-x: hidden;
