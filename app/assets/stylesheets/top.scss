@@ -8,27 +8,47 @@
   position: relative;
   scrollbar-width: none;
 }
+
+@mixin large {
+  font-size: calc(30px + ((1vw - 6px)*20/6));
+}
+
+@mixin medium {  
+  font-size: calc(20px + ((1vw - 6px)*5/6));
+}
+
+@mixin small {
+  font-size: calc(15px + ((1vw - 6px)*2/6));
+}
 //mixin 終了
 
 
 //汎用的に使うもの
 h1{
   font-family: 'Amatic SC', cursive;
-  font-size: 50px;
   margin-bottom: 50px;
+  @include large;
 }
 
 .black{
   color: black;
 }
 
+.font-large{
+  @include large;
+}
+
+.font-medium{
+  @include medium;
+}
+
+.font-small{
+  @include small;
+}
+
 //汎用的に使うもの 終了
 
 
-
-body{
-  // overflow: scroll;
-}
 
 .top{
   width: 100;
@@ -50,9 +70,9 @@ body{
 }
 
 .resize-image{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-}
+  }
 }
 
 
@@ -63,21 +83,18 @@ body{
   font-family: 'Amatic SC', cursive;
   text-align: left;
   position: absolute;
-  top: 70%;
-  left: 10%;
-  -webkit-transform : translateY(-70%);
-  transform : translateY(-70%);  
+  top: 60vh;
+  left: 5vw;
+  -webkit-transform : translateY(-40%);
+  transform : translateY(-40%);  
   z-index: 10;
 
-  .large{
-    font-size: 50px;
-    width: 350px;
-  }
-
-  .small{
-    font-size: 20px;
-    width: 150px;
-    margin-left: 200px;
+  ul{
+    width: 50vw;
+    overflow: scroll;
+    max-width: 350px;
+    min-width: 200px;
+    margin-right: 0;
   }
 
   li{
@@ -85,13 +102,28 @@ body{
   font-family: 'Amatic SC', cursive;
   color: #000;
   background-color: #e0e0e0;
-  border-radius: 5px;
-  padding: 8px 15px;
+  border-radius: 10px;
+  padding: 8px 15px 0px 15px;
   margin-bottom: 10px;
   transition: all 0.5s ease-in;
   opacity: 0;
-  list-style: none;
+  margin-left: 0px;
+}
 
+.large{
+  @include large;
+  width: 50vw;
+  max-width: 350px;
+  min-width: 200px;
+}
+
+.medium{
+  @include medium;
+  width: 22vw;
+  max-width: 150px;
+  min-width: 120px;
+  margin-left: 0px;
+  // margin-left: 15vw;
 }
 
   li:nth-child(1){
@@ -126,12 +158,13 @@ body{
 
 
 
-//その他のCSS
-.profile, .school_works2, .skills, .contact{
+
+.profile, .works, .skills, .contact{
   @include main;
 }
 
-.profile::-webkit-scrollbar, .my_works::-webkit-scrollbar, .school_works::-webkit-scrollbar, .skills::-webkit-scrollbar {
+//その他のCSS
+.profile::-webkit-scrollbar, .works::-webkit-scrollbar, .skills::-webkit-scrollbar {
   display:none;
 }
 
@@ -145,44 +178,19 @@ body{
   height: 100vh;
   .main{
     ul{
-      margin: 50px auto;
-      width: 550px;
+      margin: 50px 0vw 0px 25vw;
+      width: 60vw;
+      max-width: 700px;
+      min-width: 200px;
       li{
-      width: 70vw;
-      word-wrap: break-word;  // width以上にはみだした場合、文字の区切れを探して折り返す
-      text-align: left;
-      box-sizing: border-box;
-      margin: 0px 30px;
+        word-wrap: break-word;  // width以上にはみだした場合、文字の区切れを探して折り返す
+        text-align: left;
+        box-sizing: border-box;
       }
     }
   }
 }
 
-// .my_works{
-//   @include main(50px 50px);
-//   .main{
-//     ul{
-//       margin: 0 auto;
-//       width: 90vw;
-//       display: flex;
-//       flex-wrap:wrap;
-//       justify-content: center;
-
-//       li{
-//       margin: 0 auto;
-//       text-align: left;
-//       margin-bottom: 40px;
-//       overflow-x: hidden;
-//       width: 90vw;
-//       text-align: center;
-//         .rotate:hover{
-//           transition: all 1.5s linear 0s;
-//           transform: rotateY(360deg);
-//         }
-//       }
-//     }
-//   }
-// }
 
 .works{
   @include main(50px 0px);
@@ -190,16 +198,20 @@ body{
   .main{
     margin: 0 auto;
     ul{
-      margin: 0px auto;
+      margin: 0 auto;
       width: 90vw;
       display: flex;
       flex-wrap:wrap;
       justify-content: center;
       li{
         margin: 0 auto;
-      width: 80vw;
-      text-align: left;
-      margin-top: 30px;
+        width: 80vw;
+        text-align: center;
+        margin-bottom: 60px;
+        .rotate:hover{
+          transition: all 1.5s linear 0s;
+          transform: rotateY(360deg);
+        }
       }
     }
   }
@@ -242,37 +254,47 @@ body{
 
 // 画面幅が600pxまで
 @media screen and (max-width:600px){
+  *{
+    height: auto;
+  }
   body{
     width: 100vw;
     overflow-x: hidden;
   }
   .top{
+    position: relative;
+    overflow: hidden;
     .resize-image{
-      width: 100wh;
-      height: 50vh;
+      width: 100vw;
+      height: 67.6vh;
     }
     .cover{
       width: 100vw;
-      height: 50vh;
-    }
-  }
-  h1{
-    font-size: 30px;
-  }
-
-  .my_works{
-    .main{
-      margin: 0 auto;
-    }
-    .ul{
-      display: block;
+      height: 67.6vh;
+      position: absolute;
+      top: 0px;
+      left: 0px;
     }
   }
 
-  .school_works{
+  .welcome{
+    font-family: 'Amatic SC', cursive;
+    text-align: left;
+    position: absolute;
+    top: 40vh;
+    left: 5vw;
+    -webkit-transform : translateY(-40%);
+    transform : translateY(-40%);  
+    z-index: 10;
+  }
+
+
+  .profile{
+    height: auto;
     .main{
       ul{
-        display: block;
+        margin: 50px 0vw 0px 15vw;
+        // background-color: red;
       }
     }
   }
