@@ -10,7 +10,7 @@
 }
 
 @mixin large {
-  font-size: calc(40px + ((1vw - 6px)*22/6));
+  font-size: calc(30px + ((1vw - 6px)*20/6));
 }
 
 @mixin medium {  
@@ -18,7 +18,7 @@
 }
 
 @mixin small {
-  font-size: calc(15px + ((1vw - 6px)*5/6));
+  font-size: calc(15px + ((1vw - 6px)*2/6));
 }
 //mixin 終了
 
@@ -178,14 +178,14 @@ h1{
   height: 100vh;
   .main{
     ul{
-      margin: 50px auto;
-      width: 550px;
+      margin: 50px 0vw 0px 25vw;
+      width: 60vw;
+      max-width: 700px;
+      min-width: 200px;
       li{
-      width: 70vw;
-      word-wrap: break-word;  // width以上にはみだした場合、文字の区切れを探して折り返す
-      text-align: left;
-      box-sizing: border-box;
-      margin: 0px 30px;
+        word-wrap: break-word;  // width以上にはみだした場合、文字の区切れを探して折り返す
+        text-align: left;
+        box-sizing: border-box;
       }
     }
   }
@@ -291,5 +291,11 @@ h1{
 
   .profile{
     height: auto;
+    .main{
+      ul{
+        margin: 50px 0vw 0px 15vw;
+        // background-color: red;
+      }
+    }
   }
 }
