@@ -33,17 +33,17 @@
     %ul.font-small
       %li 
         %p<>
-          = link_to '家計簿アプリ', 'http://18.176.160.185/', class:'deco_none'
+          = link_to '家計簿アプリ', 'http://52.69.73.14/', class:'deco_none'
         %p.rotate
-          = link_to 'http://18.176.160.185/' do
-            = image_tag '/家計簿.png', class: 'width300' 
+          = link_to 'http://52.69.73.14/' do
+            = image_tag '/家計簿2.png', class: 'width300' 
 
-      %li
-        %p<>
-          = link_to '旅行に特化したブログアプリ', 'http://18.176.160.185/', class:'deco_none'
-        %p.rotate
-          = link_to 'http://18.176.160.185/' do
-            = image_tag '/旅行アプリ.jpg', class: 'width300' 
+      -# %li
+      -#   %p<>
+      -#     = link_to '旅行に特化したブログアプリ', 'http://18.176.160.185/', class:'deco_none'
+      -#   %p.rotate
+      -#     = link_to 'http://18.176.160.185/' do
+      -#       = image_tag '/旅行アプリ.jpg', class: 'width300' 
 
         -# %li 
         -#   %p<>
@@ -103,5 +103,16 @@
         =image_tag '/twitter.png', class: 'icon'
       = link_to '#' do 
         =image_tag '/mail3.png', class: 'icon'
+
+      = render 'contacts/new.html.haml'
+
+-# = form_for @contact do |f|
+-#   = f.label :name, "お名前"
+-#   = f.text_field :name, class: 'form-control'
+-#   = f.label :emal, "メールアドレス"
+-#   = f.text_field :email, class: 'form-control'
+-#   = f.label :message, 'お問い合わせ内容'
+-#   = f.text_area :message, size: '10x10', class: 'form-control'
+-#   = f.submit '送信'
 
 
