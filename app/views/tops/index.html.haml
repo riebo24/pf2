@@ -1,66 +1,36 @@
 .top
   =image_tag "/top.jpeg", class:"top_image resize-image"
   .cover
-  %ul.welcome
-    %li.large
-      Rie Yoshida
-    %li.small
-      = link_to "Profile", "#profile", class: "black"
-    %li.small
-      = link_to "works", "#works", class: "black"
-    %li.small
-      = link_to "skills", "#skills", class: "black"
-    %li.small
-      = link_to "contact", "#contact", class: "black"
+    %ul.welcome
+      %li.large
+        Rie Yoshida
+      %li.medium
+        = link_to "Profile", "#profile", class: "black"
+      %li.medium
+        = link_to "works", "#works", class: "black"
+      %li.medium
+        = link_to "skills", "#skills", class: "black"
+      %li.medium
+        = link_to "contact", "#contact", class: "black"
 
   
 .profile#profile
   .main
     %h1 Profile
-    %p 吉田　理絵｜ Yoshida Rie
-    -# %ul
-    -#   %li ・大阪府生まれ
-    -#   %li ・大阪市立大学経済学部を卒業後、都内のクレジットカード会社勤務
-    -#   %li ・クレジットカードの加盟店開拓業務に携わり、５年半法人営業
-    -#   %li ・２０１８年下期　社内表彰で最優秀賞
-    -#   %li ・２０１９年８月より、プログラミングスクールTECH::EXPERTへ入学。
-    -#   %li ・ユーザーの生活を少しでも便利にできるエンジニアを目指して転職活動中
+    %p.font-medium 吉田　理絵｜ Yoshida Rie
+    %ul.font-small
+      %li ・大阪府出身
+      %li ・大阪市立大学経済学部を卒業後、都内のクレジットカード会社勤務
+      %li ・クレジットカードの加盟店開拓業務に携わり、５年半法人営業
+      %li ・２０１８年下期　社内表彰で最優秀賞
+      %li ・２０１９年８月より、プログラミングスクールTECH::EXPERTへ入学
+      %li ・ユーザーの生活をより便利にできるエンジニアを目指して転職活動中
 
-
--# .my_works#works
--#   .main
--#     %h1 My Works
--#     %ul
--#       %li 
--#         %p<>
--#           = link_to '家計簿アプリ', 'http://18.176.160.185/', class:'deco_none'
--#         %p.rotate
--#           = link_to 'http://18.176.160.185/' do
--#             = image_tag '/家計簿.png', class: 'width300' 
-
--#       %li
--#         %p<>
--#           = link_to '旅行に特化したブログアプリ', 'http://18.176.160.185/', class:'deco_none'
--#         %p.rotate
--#           = link_to 'http://18.176.160.185/' do
--#             = image_tag '/旅行アプリ.jpg', class: 'width300' 
-
--#       %li 
--#         %p<>
--#           = link_to '収益計算アプリ', 'http://18.176.160.185/', class:'deco_none'
--#         %p.rotate
--#           = link_to 'http://18.176.160.185/' do
--#             = image_tag '/チャットアプリ.png', class: 'width300' 
-
-
-
--#       %li ・Qiita記事
--#       %li ・twitter
 
 .works#works
   .main
     %h1 Works
-    %ul
+    %ul.font-small
       %li 
         %p<>
           = link_to '家計簿アプリ', 'http://18.176.160.185/', class:'deco_none'
@@ -89,7 +59,7 @@
       %li 
         %p<>
           = link_to 'チャットアプリ（スクール課題）', 'http://18.176.160.185/', class:'deco_none'
-          %p 
+          %p.rotate
             = link_to 'http://18.176.160.185/' do
               = image_tag '/チャットアプリ.png', class: 'width300' 
           .witdh300
@@ -101,7 +71,7 @@
       %li
         %p<>
           = link_to 'フリマアプリ（スクール課題）', 'http://18.178.190.24/', class: 'deco_none'
-          %p
+          %p.rotate
             = link_to 'http://18.178.190.24/' do
               = image_tag '/フリマアプリ.jpg', class: 'width300'
           %p 【basic認証】
@@ -120,7 +90,7 @@
 .skills#skills
   .main
     %h1 Skills
-    %ul
+    %ul.font-small
       %li 学んだスキル
       %li HTML/CSS/JavaScript/JQuery/Ruby/Rails
       %li Git,Github/MySQL/AWS
