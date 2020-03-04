@@ -277,6 +277,7 @@ h1{
       height: 67.6vh;
     }
     .cover{
+      font-weight: 530;
       width: 100vw;
       height: 67.6vh;
       position: absolute;
@@ -287,6 +288,7 @@ h1{
 
   .welcome{
     font-family: 'Amatic SC', cursive;
+    font-weight: 530;
     text-align: left;
     position: absolute;
     top: 40vh;
@@ -294,6 +296,9 @@ h1{
     -webkit-transform : translateY(-40%);
     transform : translateY(-40%);  
     z-index: 10;
+    .large{
+      font-weight: 530;
+    }
   }
 
 
