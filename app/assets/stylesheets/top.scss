@@ -202,12 +202,17 @@ h1{
       width: 90vw;
       display: flex;
       flex-wrap:wrap;
-      justify-content: center;
       li{
         margin: 0 auto;
         width: 80vw;
         text-align: center;
         margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        .rotate{
+          margin-top: 10px;
+          //アプリ名と画像のスペース
+        }
         .rotate:hover{
           transition: all 1.5s linear 0s;
           transform: rotateY(360deg);
@@ -247,7 +252,10 @@ h1{
 .width300{
   width: 80vw;
   max-width: 300px;
-  margin: 0 auto;
+  p{
+    text-align: left;
+    margin-left: 40px;
+  }
 }
 
 
@@ -269,6 +277,7 @@ h1{
       height: 67.6vh;
     }
     .cover{
+      font-weight: 530;
       width: 100vw;
       height: 67.6vh;
       position: absolute;
@@ -279,6 +288,7 @@ h1{
 
   .welcome{
     font-family: 'Amatic SC', cursive;
+    font-weight: 530;
     text-align: left;
     position: absolute;
     top: 40vh;
@@ -286,6 +296,9 @@ h1{
     -webkit-transform : translateY(-40%);
     transform : translateY(-40%);  
     z-index: 10;
+    .large{
+      font-weight: 530;
+    }
   }
 
 
@@ -298,4 +311,28 @@ h1{
       }
     }
   }
+
+  .works{
+    .main{
+      ul{
+        margin: 0 auto;
+        li{
+          max-width: 300px;
+          display: block;
+          //display:flexを解除
+
+        }
+      }
+    }
+  }
+
+  .width300{
+    width: 80vw;
+    max-width: 300px;
+    p{
+      text-align: left;
+      margin-left: 40px;
+    }
+  }
+
 }
