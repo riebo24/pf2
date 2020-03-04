@@ -5,6 +5,7 @@ $(function(){
     console.log("発火")
   })
 
+  //ページ内スクロールの記述
   // ②ページ内リンク a[href^=#]は、aタグのhref属性が"#"ではじまるものを抽出（前方一致）
   $('a[href^="#"]').click(function() {
       

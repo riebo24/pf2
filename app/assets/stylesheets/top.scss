@@ -10,7 +10,7 @@
 }
 
 @mixin large {
-  font-size: calc(30px + ((1vw - 6px)*20/6));
+  font-size: calc(35px + ((1vw - 6px)*5/6));
 }
 
 @mixin medium {  
@@ -98,16 +98,16 @@ h1{
   }
 
   li{
-  text-align: left;
-  font-family: 'Amatic SC', cursive;
-  color: #000;
-  background-color: #e0e0e0;
-  border-radius: 10px;
-  padding: 8px 15px 0px 15px;
-  margin-bottom: 10px;
-  transition: all 0.5s ease-in;
-  opacity: 0;
-  margin-left: 0px;
+    text-align: left;
+    font-family: 'Amatic SC', cursive;
+    color: #000;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 8px 15px 0px 15px;
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+    margin-left: 0px;
 }
 
 .large{
@@ -143,9 +143,6 @@ h1{
   }
   li:nth-child(5){
     transition-delay:2.0s;
-  }
-  li:nth-child(6){
-    transition-delay:2.5s;
   }
 }
   //アニメーション付与
@@ -260,6 +257,7 @@ h1{
 
 
 
+
 // 画面幅が600pxまで
 @media screen and (max-width:600px){
   *{
@@ -288,7 +286,6 @@ h1{
 
   .welcome{
     font-family: 'Amatic SC', cursive;
-    font-weight: 530;
     text-align: left;
     position: absolute;
     top: 40vh;
@@ -299,15 +296,24 @@ h1{
     .large{
       font-weight: 530;
     }
+    li{
+      opacity: 0.5;
+    }
   }
 
 
   .profile{
     height: auto;
     .main{
+      width: 90vw;
       ul{
-        margin: 50px 0vw 0px 15vw;
-        // background-color: red;
+        width: 90vw;
+        margin: 50px auto;
+        text-align: center;
+      }
+      li{
+        width: 90vw;
+        margin: 0 auto;
       }
     }
   }
