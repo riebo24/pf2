@@ -28,8 +28,57 @@
 }
 
 
+
+
+//汎用的に使うもの
+h1{
+  font-family: 'Amatic SC', cursive;
+  margin-bottom: 50px;
+  @include large;
+}
+
+.black{
+  color: black;
+}
+
+.font-large{
+  @include large;
+}
+
+.font-medium{
+  @include medium;
+}
+
+.font-small{
+  @include small;
+}
+
 #wrapper{
   overflow-x: hidden;
   max-width: 100%;
   height: auto;
 }
+
+.deco_none{
+  text-decoration: none;
+  color: #707070;
+}
+
+.color70{
+  color: #707070;
+}
+
+.width300{
+  width: 80vw;
+  max-width: 300px;
+  p{
+    text-align: left;
+    margin-left: 40px;
+  }
+}
+
+
+//汎用的に使うもの 終了
+
+
+

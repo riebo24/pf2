@@ -20,35 +20,11 @@
 @mixin small {
   font-size: calc(15px + ((1vw - 6px)*2/6));
 }
+
+@mixin smaller {
+  font-size: calc(13px + ((1vw - 6px)*2/6));
+}
 //mixin 終了
-
-
-//汎用的に使うもの
-h1{
-  font-family: 'Amatic SC', cursive;
-  margin-bottom: 50px;
-  @include large;
-}
-
-.black{
-  color: black;
-}
-
-.font-large{
-  @include large;
-}
-
-.font-medium{
-  @include medium;
-}
-
-.font-small{
-  @include small;
-}
-
-//汎用的に使うもの 終了
-
-
 
 .top{
   width: 100;
@@ -171,6 +147,7 @@ h1{
 }
 
 
+
 .profile{
   height: 100vh;
   .main{
@@ -206,6 +183,10 @@ h1{
         margin-bottom: 60px;
         display: flex;
         justify-content: center;
+        .more_info{
+          padding-top: 10px;
+          color: #707070;
+        }
         .rotate{
           margin-top: 10px;
           //アプリ名と画像のスペース
@@ -237,25 +218,62 @@ h1{
 }
 
 .icon{
+  width: 50px;
+  color: gray;
+
+  padding-top: 30px;
+}
+.git_icon{
+  padding-left: 5px;
   width: 60px;
   color: gray;
 }
 
-.deco_none{
-  text-decoration: none;
-  color: black;
-}
 
-.width300{
-  width: 80vw;
-  max-width: 300px;
-  p{
-    text-align: left;
-    margin-left: 40px;
+//詳細説明
+.content{
+  @include main(50px 50px); 
+  height: 100vh;
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  .image{
+    height: 100%;
+    width: 45vw;
+    max-width: 700px;
+    background-color: white;
+    img{
+      height: 100%;
+      width: 45vw;
+      max-width: 700px;
+    }
+    }
+  .details{
+    //詳細をまとめるクラス
+    height: 75vh;
+    width: 45vw;
+    max-width: 700px;
+    overflow: scroll;
+    opacity: 0.8;
+
+    &::-webkit-scrollbar {
+      display:none;
+    }
+    h2{
+      background-color: white;
+      width: 100%;
+      text-align: left;  
+      padding-bottom: 20px;
+    }
+    p{
+      text-align: left;
+      padding-left: 20px;
+      @include smaller;
+    }
   }
 }
-
-
+//詳細説明end
 
 
 // 画面幅が600pxまで
