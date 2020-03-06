@@ -33,7 +33,7 @@
 //汎用的に使うもの
 h1{
   font-family: 'Amatic SC', cursive;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   @include large;
 }
 
@@ -75,6 +75,13 @@ h1{
     text-align: left;
     margin-left: 40px;
   }
+}
+
+.fadein {
+  //画像がふわっとでるアニメーション用
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
 }
 
 
