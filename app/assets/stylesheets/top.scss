@@ -314,8 +314,7 @@
 //詳細説明
 .content{
   @include main(50px 50px); 
-  height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   //変なスクロールバーを出さないための記述
   .app-info{
     padding-bottom: 30px;
@@ -336,7 +335,6 @@
     }
   .details{
     //詳細をまとめるクラス
-    height: 70vh;
     width: 45vw;
     max-width: 700px;
     overflow: scroll;
