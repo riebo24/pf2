@@ -162,8 +162,17 @@
         box-sizing: border-box;
       }
     }
+    .icon{
+      width: 50px;
+      padding-top: 30px;
+    }
+    .git_icon{
+      padding-left: 5px;
+      width: 60px;
+    }
   }
 }
+
 
 
 .works{
@@ -184,8 +193,9 @@
         display: flex;
         justify-content: center;
         .more_info{
-          padding-top: 10px;
+          padding-top: 20px;
           color: #707070;
+          text-decoration: none;
         }
         .rotate{
           margin-top: 10px;
@@ -204,30 +214,57 @@
   height: 100vh;
   .main{
     ul{
-      width: 300px;
+      @keyframes bound {
+        0% {transform: translateY(0px);}
+        100% {transform: translateY(-10px);}
+        //アニメーションの動きを設定
+      }
+      
       margin: 0 auto;
+      width: 90vw;
       li{
-        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 70px!important;
+        height: 70px!important;
+
+      }
+      .skill-icon{
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        &:hover{
+        -webkit-animation: bound .3s ease infinite alternate;
+        -moz-animation:    bound .3s ease infinite alternate;
+        animation: bound .3s ease infinite alternate;
+        //iconが跳ねるアニメーション
+        }  
+      }
+      .skill-icons{
+        margin: 50px auto;
+        width: 85vw;
+        max-width: 800px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        //要素が横幅をオーバーすれば改行する
+        padding-bottom: 50px;
       }
     }
   }
 }
 
-.contact{
-  height: 100vh;
+.more_info{
+  padding-top: 10px;
+  color: #707070;
+  -webkit-animation: bound .7s ease infinite alternate;
+  -moz-animation:    bound .7s ease infinite alternate;
+  animation: bound .7s ease infinite alternate;
 }
 
-.icon{
-  width: 50px;
-  color: gray;
 
-  padding-top: 30px;
-}
-.git_icon{
-  padding-left: 5px;
-  width: 60px;
-  color: gray;
-}
+
+
 
 
 //詳細説明
@@ -344,11 +381,13 @@
           max-width: 300px;
           display: block;
           //display:flexを解除
+          
 
         }
       }
     }
   }
+
 
   .width300{
     width: 80vw;
@@ -361,3 +400,4 @@
   }
 
 }
+
