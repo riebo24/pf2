@@ -1,0 +1,42 @@
+.content
+  %h1
+    フリマアプリ
+  .app-info
+    （スクール課題）
+  .wrapper
+    .image.furima
+      = link_to 'http://18.178.190.24/' do
+        = image_tag '/フリマアプリ.jpg'
+    .details
+      %h2 
+        開発環境：
+        %p 人数：6人
+        %p アジャイル型開発（スクラム）
+        %p Trelloによるタスク管理
+
+      %h2 
+        主な機能：
+        %p ユーザー登録、ログイン、商品出品・編集・削除
+        %p 商品購入（クレジットカード決済）★、AWSにてデプロイ★
+        %p （★）担当箇所
+
+      %h2
+        制作時間：
+        %p 156時間
+
+      %h2 
+        チームとして工夫した点：
+        %p ・開発時間の確保（会議時間は最大30分）
+        %p ・サポート役の設定
+        %p   →週初めに決めた優先タスクを担当しないメンバーをその週のサポート役に。
+        %p   　優先タスクを担当するメンバーから相談を受けた際は、相手のタスクを優先。
+        %p   　開発効率をあげつつ、相談しやすい環境を作った。
+
+      %h2
+        テストアカウント：
+        %p 【basic認証】ユーザー名　: admin、パスワード　: 2222
+        %p 【出品者】Email　: test1@com、パスワード　: 11111111
+        %p 【購入者】Email　: test2@com、パスワード　: 11111111
+
+      %h2
+        = link_to "最終課題説明文", "https://docs.google.com/document/d/1jxYEQ-O_XULgpY6wDcXEw7ijldBOgYYwRhJvex0SLlg/edit?usp=sharing", class:"color70"

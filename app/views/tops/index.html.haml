@@ -5,31 +5,52 @@
       %li.large
         Rie Yoshida
       %li.medium
-        = link_to "Profile", "#profile", class: "black"
+        = link_to "Profile", "#profile", class: "color40"
       %li.medium
-        = link_to "Works", "#works", class: "black"
+        = link_to "Works", "#works", class: "color40"
       %li.medium
-        = link_to "Skills", "#skills", class: "black"
+        = link_to "Skills", "#skills", class: "color40"
       %li.medium
-        = link_to "Contact", "#contact", class: "black"
+        = link_to "Contact", "#contact", class: "color40"
 
   
 .profile#profile
-  .main
+  .main.fadein
     %h1 Profile
     %p.font-medium 吉田　理絵｜ Yoshida Rie
-    %ul.font-small
-      %li ・大阪府出身
-      %li ・大阪市立大学経済学部を卒業
-      %li ・都内のクレジットカード会社へ就職
-      %li ・加盟店開拓業務に携わり、法人営業を5年半
-      %li ・２０１８年下期　社内表彰で最優秀賞
-      %li ・２０１９年９月　プログラミングスクールTECH::EXPERTへ入学
-      %li ・ユーザーの生活をより便利にできるエンジニアを目指し、転職活動中
+    %p 
+      = link_to 'https://twitter.com/riebo24', class: 'deco_none' do 
+        =image_tag '/twitter-1.png', class: 'icon'
+      = link_to 'https://github.com/rie1224' do 
+        =image_tag '/github-01.png', class: 'git_icon'
+
+    .profile-line
+      %p  はじめまして、吉田理絵と申します。
+      %p.margin  ご覧いただきまして本当にありがとうございます
+
+      .pr
+        %p.large  ただいま転職活動中！
+        %p  ・職種：サーバーサイドエンジニア
+        %p  ・希望勤務地：関西　　　　　　　
+        %p  ・希望年収：350万円以上　　　　
+        %p  　
+        %p  ご興味を持っていただければ、ご連絡ください！！
+
+      %ul.font-small
+        %li ・大阪府出身
+        %li ・大阪市立大学経済学部を卒業
+        %li ・２０１４年４月、都内のクレジットカード会社へ就職
+        %li ・加盟店開拓業務に携わり、法人営業を5年半
+        %li ・２０１８年下期　社内表彰で最優秀賞
+        %li ・自身やユーザーの生活をより便利にできるエンジニアを目指しプログラミング学習開始
+        %li ・２０１９年９月　プログラミングスクールTECH::EXPERTへ入学
+        %li ・学習期間：7ヶ月
+
+
 
 
 .works#works
-  .main
+  .main.fadein
     %h1 Works
     %ul.font-small
       %li 
@@ -38,13 +59,15 @@
             = link_to '家計簿アプリ', 'http://52.69.73.14/', class:'deco_none'
           %p.rotate
             = link_to 'http://52.69.73.14/' do
-              = image_tag '/家計簿2.png', class: 'width300' 
-        .width300
+              .image.account 
+                -# accoutはJS用
+                = image_tag '/家計簿アプリ.png', class: 'width300 fadein' 
+        .work-details
           %p 【テスト用アカウント】　
-          %p 　email　　　: test@com
-          %p 　password　: 11111111 
+          %p 　Email　　　: test@com
+          %p 　パスワード　: 11111111 
           .more_info
-            details
+            = link_to "more info..", account_tops_path, class:"more_info"
 
       -# %li
       -#   .work_wapper
@@ -62,18 +85,7 @@
       -#       = link_to 'http://18.176.160.185/' do
       -#         = image_tag '/チャットアプリ.png', class: 'width300' 
 
-      %li
-        .work_wapper
-          %p<>
-            = link_to 'チャットアプリ（スクール課題）', 'http://18.176.160.185/', class:'deco_none'
-          %p.rotate
-            = link_to 'http://18.176.160.185/' do
-              = image_tag '/チャットアプリ.png', class: 'width300' 
-        .width300
-          %p 【テスト用アカウント】
-          %p 　email　　 　: test1@com
-          %p 　name　 　　: テスト太郎
-          %p 　password　: 11111111 
+
               
       %li
         .work_wapper
@@ -81,42 +93,91 @@
             = link_to 'フリマアプリ（スクール課題）', 'http://18.178.190.24/', class: 'deco_none'
           %p.rotate
             = link_to 'http://18.178.190.24/' do
-              = image_tag '/フリマアプリ.jpg', class: 'width300'
-        .width300
+              .image.furima
+                = image_tag '/フリマアプリ.jpg', class: 'width300 fadein'
+        .work-details
           %p 【basic認証】
           %p 　ユーザー名　: admin
           %p 　パスワード　: 2222
           %p 【テスト用アカウント】
           %p 　出品者
-          %p 　email　　　: test1@com
+          %p 　Email　　　: test1@com
           %p 　password　: 11111111 
-          %p 　購入者
-          %p 　email　　　: test2@com
-          %p 　password　: 11111111 
+          .more_info
+            = link_to "more info..", furima_tops_path, class:"more_info"
 
       %li
         .work_wapper
           %p<>
-            = link_to "・Qiita記事", "https://qiita.com/rie1224/items/c6a9a647f669061fcbf4", class:"deco_none"
+            = link_to 'チャットアプリ（スクール課題）', 'http://18.176.160.185/', class:'deco_none'
+          %p.rotate
+            = link_to 'http://18.176.160.185/' do
+              .image.chat
+                = image_tag '/チャットアプリ.png', class: 'width300 fadein' 
+        .work-details
+          %p 【テスト用アカウント】
+          %p 　Email　　 　: test1@com
+          %p 　Name　 　　: テスト太郎
+          %p 　パスワード　: 11111111 
+          .more_info
+            = link_to "more info..", chat_space_tops_path, class:"more_info"
+
+      %li
+        .work_wapper
+          %p<>
+            = link_to "Qiita記事", "https://qiita.com/rie1224/items/c6a9a647f669061fcbf4", class:"deco_none"
           %p.rotate
             = link_to 'https://qiita.com/rie1224/items/c6a9a647f669061fcbf4' do
-              =image_tag '/qiita.png', class: 'width300'
-        .width300
+              =image_tag '/qiita.png', class: 'width300 fadein'
+        .work-details
 
 .skills#skills
-  .main
+  .main.fadein
     %h1 Skills
     %ul.font-small
-      %li 学んだスキル
-      %li HTML/CSS/JavaScript/JQuery/Ruby/Rails
-      %li Git,Github/MySQL/AWS
+      .skill-icons
+        %li
+          　
+          = image_tag "/html5-01.png", class: "skill-icon"
+        %li 
+          　
+          = image_tag '/css3-01.png', class: "skill-icon"
+        %li
+          　         
+          = image_tag "/prog-js01.png", class: "skill-icon"
+        %li
+          JQuery
+          = image_tag "/prog-jquery.png", class: "skill-icon"  
+      .skill-icons        
+        %li
+          Ruby
+          = image_tag "/prog-ruby.png", class: "skill-icon"
+        %li
+          Rails
+          = image_tag "/prog-rails.png", class: "skill-icon"
+      .skill-icons  
+        %li
+          　
+          = image_tag "/dbs-mysql.png", class: "skill-icon"
+        %li
+          github
+          = image_tag "/github-01.png", class: "skill-icon"
+        %li
+          　
+          = image_tag "/PinClipart.com_sunrise-clip-art-black_1736519.png", class: "skill-icon"
+      .info
+        %p 上記を使用し、スクール課題で3つ、個人開発で3つアプリを作成
+        %p AWSを使用したデプロイを4回実施
 
-.contact#contact
-  .main
-    %h1 contact
-    %p 
-      = link_to 'https://twitter.com/riebo24', class: 'deco_none' do 
-        =image_tag '/twitter.png', class: 'icon'
-      = link_to '#' do 
-        =image_tag '/mail3.png', class: 'icon'
+
+      
+
+-# .contact#contact
+-#   .main
+-#     %h1 contact
+-#     %p 
+-#       = link_to 'https://twitter.com/riebo24', class: 'deco_none' do 
+-#         =image_tag '/twitter.png', class: 'icon'
+-#       = link_to '#' do 
+-#         =image_tag '/mail3.png', class: 'icon'
 

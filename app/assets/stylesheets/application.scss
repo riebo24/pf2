@@ -17,6 +17,7 @@
 @import "./reset";
 @import "./top";
 
+
 *{
   box-sizing: border-box;
   // font-family: 'Amatic SC', cursive;                //英数字用フォント Amatic SC
@@ -28,8 +29,75 @@
 }
 
 
+
+
+//汎用的に使うもの
+h1{
+  font-family: 'Amatic SC', cursive;
+  @include large;
+}
+
+.color40{
+  color: #f0f8ff;
+
+}
+
+.font-large{
+  @include large;
+}
+
+.font-medium{
+  @include medium;
+}
+
+.font-small{
+  @include small;
+}
+
 #wrapper{
   overflow-x: hidden;
   max-width: 100%;
   height: auto;
 }
+
+.deco_none{
+  text-decoration: none;
+  color: #707070;
+}
+
+.color70{
+  color: #707070;
+}
+
+.width300{
+  width: 80vw;
+  max-width: 300px;
+}
+
+.work-details{
+  width: 80vw;
+  max-width: 300px;
+  padding-top: 10px;
+  p{
+    text-align: left;
+    margin-left: 40px;
+  }
+}
+
+.fadein, .fadein2 {
+  //画像がふわっとでるアニメーション用
+  //最初は要素が透明＋Y軸に20px下げる。あとの動きはfadein.js
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+.margin{
+  margin-bottom: 20px;
+}
+
+
+
+//汎用的に使うもの 終了
+
+
