@@ -34,12 +34,12 @@
 //汎用的に使うもの
 h1{
   font-family: 'Amatic SC', cursive;
-  margin-bottom: 20px;
   @include large;
 }
 
-.black{
-  color: black;
+.color40{
+  color: #f0f8ff;
+
 }
 
 .font-large{
@@ -84,15 +84,20 @@ h1{
   }
 }
 
-.fadein {
+.fadein, .fadein2 {
   //画像がふわっとでるアニメーション用
+  //最初は要素が透明＋Y軸に20px下げる。あとの動きはfadein.js
   opacity : 0;
   transform: translateY(20px);
   transition: all 1s;
 }
 
+.margin{
+  margin-bottom: 20px;
+}
+
+
 
 //汎用的に使うもの 終了
-
 
 

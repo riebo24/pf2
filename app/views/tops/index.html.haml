@@ -5,37 +5,52 @@
       %li.large
         Rie Yoshida
       %li.medium
-        = link_to "Profile", "#profile", class: "black"
+        = link_to "Profile", "#profile", class: "color40"
       %li.medium
-        = link_to "Works", "#works", class: "black"
+        = link_to "Works", "#works", class: "color40"
       %li.medium
-        = link_to "Skills", "#skills", class: "black"
+        = link_to "Skills", "#skills", class: "color40"
       %li.medium
-        = link_to "Contact", "#contact", class: "black"
+        = link_to "Contact", "#contact", class: "color40"
 
   
-.profile#profile.fadein
-  .main
+.profile#profile
+  .main.fadein
     %h1 Profile
     %p.font-medium 吉田　理絵｜ Yoshida Rie
-    %ul.font-small
-      %li ・大阪府出身
-      %li ・大阪市立大学経済学部を卒業
-      %li ・都内のクレジットカード会社へ就職
-      %li ・加盟店開拓業務に携わり、法人営業を5年半
-      %li ・２０１８年下期　社内表彰で最優秀賞
-      %li ・２０１９年９月　プログラミングスクールTECH::EXPERTへ入学
-      %li ・ユーザーの生活をより便利にできるエンジニアを目指し、転職活動中
-
     %p 
       = link_to 'https://twitter.com/riebo24', class: 'deco_none' do 
         =image_tag '/twitter-1.png', class: 'icon'
       = link_to 'https://github.com/rie1224' do 
         =image_tag '/github-01.png', class: 'git_icon'
 
+    .profile-line
+      %p  はじめまして、吉田理絵と申します。
+      %p.margin  ご覧いただきまして本当にありがとうございます
 
-.works#works.fadein
-  .main
+      .pr
+        %p.large  ただいま転職活動中！
+        %p  ・職種：サーバーサイドエンジニア
+        %p  ・希望勤務地：関西　　　　　　　
+        %p  ・希望年収：350万円以上　　　　
+        %p  　
+        %p  ご興味を持っていただければ、ご連絡ください！！
+
+      %ul.font-small
+        %li ・大阪府出身
+        %li ・大阪市立大学経済学部を卒業
+        %li ・２０１４年４月、都内のクレジットカード会社へ就職
+        %li ・加盟店開拓業務に携わり、法人営業を5年半
+        %li ・２０１８年下期　社内表彰で最優秀賞
+        %li ・自身やユーザーの生活をより便利にできるエンジニアを目指しプログラミング学習開始
+        %li ・２０１９年９月　プログラミングスクールTECH::EXPERTへ入学
+        %li ・学習期間：7ヶ月
+
+
+
+
+.works#works
+  .main.fadein
     %h1 Works
     %ul.font-small
       %li 
@@ -116,8 +131,8 @@
               =image_tag '/qiita.png', class: 'width300 fadein'
         .work-details
 
-.skills#skills.fadein
-  .main
+.skills#skills
+  .main.fadein
     %h1 Skills
     %ul.font-small
       .skill-icons
@@ -140,18 +155,20 @@
         %li
           Rails
           = image_tag "/prog-rails.png", class: "skill-icon"
+      .skill-icons  
         %li
           　
           = image_tag "/dbs-mysql.png", class: "skill-icon"
         %li
           github
           = image_tag "/github-01.png", class: "skill-icon"
-        -# %li
-        -#   = image_tag "", class: "skill-icon"
-        -# %li
-        -#   = image_tag "", class: "skill-icon"
-        -# %li
-        -#   = image_tag "", class: "skill-icon"
+        %li
+          　
+          = image_tag "/PinClipart.com_sunrise-clip-art-black_1736519.png", class: "skill-icon"
+      .info
+        %p 上記を使用し、スクール課題で3つ、個人開発で3つアプリを作成
+        %p AWSを使用したデプロイを4回実施
+
 
       
 
