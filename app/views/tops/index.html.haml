@@ -14,7 +14,7 @@
         = link_to "Contact", "#contact", class: "black"
 
   
-.profile#profile
+.profile#profile.fadein
   .main
     %h1 Profile
     %p.font-medium 吉田　理絵｜ Yoshida Rie
@@ -29,12 +29,12 @@
 
     %p 
       = link_to 'https://twitter.com/riebo24', class: 'deco_none' do 
-        =image_tag '/twitter.png', class: 'icon'
+        =image_tag '/twitter-1.png', class: 'icon'
       = link_to 'https://github.com/rie1224' do 
-        =image_tag '/Git.png', class: 'git_icon'
+        =image_tag '/github-01.png', class: 'git_icon'
 
 
-.works#works
+.works#works.fadein
   .main
     %h1 Works
     %ul.font-small
@@ -47,7 +47,7 @@
               .image.account 
                 -# accoutはJS用
                 = image_tag '/家計簿アプリ.png', class: 'width300 fadein' 
-        .width300
+        .work-details
           %p 【テスト用アカウント】　
           %p 　Email　　　: test@com
           %p 　パスワード　: 11111111 
@@ -80,7 +80,7 @@
             = link_to 'http://18.178.190.24/' do
               .image.furima
                 = image_tag '/フリマアプリ.jpg', class: 'width300 fadein'
-        .width300
+        .work-details
           %p 【basic認証】
           %p 　ユーザー名　: admin
           %p 　パスワード　: 2222
@@ -99,7 +99,7 @@
             = link_to 'http://18.176.160.185/' do
               .image.chat
                 = image_tag '/チャットアプリ.png', class: 'width300 fadein' 
-        .width300
+        .work-details
           %p 【テスト用アカウント】
           %p 　Email　　 　: test1@com
           %p 　Name　 　　: テスト太郎
@@ -114,15 +114,46 @@
           %p.rotate
             = link_to 'https://qiita.com/rie1224/items/c6a9a647f669061fcbf4' do
               =image_tag '/qiita.png', class: 'width300 fadein'
-        .width300
+        .work-details
 
-.skills#skills
+.skills#skills.fadein
   .main
     %h1 Skills
     %ul.font-small
-      %li 学んだスキル
-      %li HTML/CSS/JavaScript/JQuery/Ruby/Rails
-      %li Git,Github/MySQL/AWS
+      .skill-icons
+        %li
+          　
+          = image_tag "/html5-01.png", class: "skill-icon"
+        %li 
+          　
+          = image_tag '/css3-01.png', class: "skill-icon"
+        %li
+          　         
+          = image_tag "/prog-js01.png", class: "skill-icon"
+        %li
+          JQuery
+          = image_tag "/prog-jquery.png", class: "skill-icon"  
+      .skill-icons        
+        %li
+          Ruby
+          = image_tag "/prog-ruby.png", class: "skill-icon"
+        %li
+          Rails
+          = image_tag "/prog-rails.png", class: "skill-icon"
+        %li
+          　
+          = image_tag "/dbs-mysql.png", class: "skill-icon"
+        %li
+          github
+          = image_tag "/github-01.png", class: "skill-icon"
+        -# %li
+        -#   = image_tag "", class: "skill-icon"
+        -# %li
+        -#   = image_tag "", class: "skill-icon"
+        -# %li
+        -#   = image_tag "", class: "skill-icon"
+
+      
 
 -# .contact#contact
 -#   .main
