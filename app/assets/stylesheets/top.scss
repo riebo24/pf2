@@ -313,9 +313,9 @@
 
 //詳細説明
 .content{
+  height: 100vh;
   @include main(50px 50px); 
-  // overflow: hidden;
-  //変なスクロールバーを出さないための記述
+  overflow: scroll;
   .app-info{
     padding-bottom: 30px;
   }
@@ -444,7 +444,7 @@
 
   .content{
     overflow-y: visible;
-    padding: 50px 20px 0px 20px;
+    padding: 50px 20px 50px 20px;
 
     .wrapper{
       width: 90vw;
