@@ -335,12 +335,12 @@
     //詳細をまとめるクラス
     width: 45vw;
     max-width: 700px;
-    overflow: scroll;
+    // overflow: scroll;
     opacity: 0.8;
     border-radius: 10px;
-    &::-webkit-scrollbar {
-      display:none;
-    }
+    // &::-webkit-scrollbar {
+    //   display:none;
+    // }
     h2{
       padding: 10px 10px 0px 20px;
       width: 100%;
